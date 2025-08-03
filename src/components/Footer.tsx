@@ -1,4 +1,4 @@
-import { Atom, Mail, FileText, Shield } from "lucide-react";
+import { Atom, Mail, FileText, Shield, Twitter, Youtube, MessageCircle } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,10 +18,23 @@ export const Footer = () => {
                 <p className="text-sm text-muted-foreground">Desarrolladores de The Last Harvest</p>
               </div>
             </div>
-            <p className="text-muted-foreground max-w-md">
+            <p className="text-muted-foreground max-w-md mb-4">
               Creamos experiencias de juego inmersivas que desafían las convenciones, 
               combinando narrativa profunda con mecánicas innovadoras.
             </p>
+            
+            {/* Social Media Links */}
+            <div className="flex items-center space-x-4">
+              <a href="#" className="w-10 h-10 bg-neon/10 hover:bg-neon/20 border border-neon/30 rounded-lg flex items-center justify-center transition-colors group">
+                <Twitter className="w-5 h-5 text-neon group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-neon/10 hover:bg-neon/20 border border-neon/30 rounded-lg flex items-center justify-center transition-colors group">
+                <Youtube className="w-5 h-5 text-neon group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-neon/10 hover:bg-neon/20 border border-neon/30 rounded-lg flex items-center justify-center transition-colors group">
+                <MessageCircle className="w-5 h-5 text-neon group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
           </div>
 
           {/* Game Info */}

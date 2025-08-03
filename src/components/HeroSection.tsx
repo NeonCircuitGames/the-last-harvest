@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, Heart, ExternalLink } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const HeroSection = () => {
   return (
@@ -22,8 +23,13 @@ export const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        {/* Language Switcher */}
+        <div className="absolute top-4 right-4">
+          <LanguageSwitcher />
+        </div>
+        
         {/* Game Title */}
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-neon bg-clip-text text-transparent animate-pulse">
+        <h1 className="text-6xl md:text-8xl font-orbitron font-black mb-6 bg-gradient-neon bg-clip-text text-transparent tracking-wider drop-shadow-2xl">
           THE LAST HARVEST
         </h1>
         
