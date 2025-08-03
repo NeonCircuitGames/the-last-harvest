@@ -61,7 +61,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Game-specific colors
+				neon: {
+					DEFAULT: 'hsl(var(--neon-green))',
+					glow: 'hsl(var(--neon-glow))'
+				},
+				purple: {
+					deep: 'hsl(var(--purple-deep))'
+				},
+				carbon: 'hsl(var(--carbon-black))',
+				wasteland: 'hsl(var(--wasteland-gray))',
+				radiation: 'hsl(var(--radiation-glow))'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'neon': 'var(--shadow-neon)',
+				'purple': 'var(--shadow-purple)',
+				'card': 'var(--shadow-card)'
+			},
+			transitionProperty: {
+				'glow': 'var(--transition-glow)',
+				'smooth': 'var(--transition-smooth)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

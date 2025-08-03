@@ -8,35 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* The Last Harvest - Post-Apocalyptic Game Theme */
+    --background: 0 0% 6%; /* Dark carbon black */
+    --foreground: 0 0% 95%; /* Light text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%; /* Slightly lighter dark */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 100% 53%; /* Neon green #39FF14 */
+    --primary-foreground: 0 0% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 248 57% 58%; /* Deep purple #6A5ACD */
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 120 100% 53%; /* Neon green accent */
+    --accent-foreground: 0 0% 6%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 12%;
+    --ring: 120 100% 53%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom game design tokens */
+    --neon-green: 120 100% 53%; /* #39FF14 */
+    --neon-glow: 120 100% 53%;
+    --purple-deep: 248 57% 58%; /* #6A5ACD */
+    --carbon-black: 0 0% 6%; /* #0F0F0F */
+    --wasteland-gray: 0 0% 25%;
+    --radiation-glow: 120 100% 65%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--carbon-black)), hsl(0 0% 12%));
+    --gradient-neon: linear-gradient(90deg, hsl(var(--neon-green)) 0%, hsl(var(--purple-deep)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    
+    /* Shadows and glows */
+    --shadow-neon: 0 0 20px hsl(var(--neon-green) / 0.3);
+    --shadow-purple: 0 0 30px hsl(var(--purple-deep) / 0.2);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+    
+    /* Animations */
+    --transition-glow: all 0.3s ease-in-out;
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
