@@ -7,45 +7,43 @@ import {
   Sun, 
   Gamepad2 
 } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export const FeaturesSection = () => {
-  const { t } = useLanguage();
   const features = [
     {
       icon: <Atom className="w-8 h-8" />,
-      titleKey: "feature1Title",
-      descKey: "feature1Desc",
+      title: "Simulación Agrícola Nuclear",
+      description: "Sistema avanzado de cultivo con mecánicas de radiación, mutación genética y tecnología atómica para crear híbridos únicos.",
       gradient: "from-neon/20 to-radiation/10"
     },
     {
       icon: <Crosshair className="w-8 h-8" />,
-      titleKey: "feature2Title",
-      descKey: "feature2Desc",
+      title: "Exploración y Combate FPS",
+      description: "Aventúrate en el yermo en primera persona, enfrentando criaturas mutadas y descubriendo los secretos del mundo perdido.",
       gradient: "from-purple-deep/20 to-neon/10"
     },
     {
       icon: <Scale className="w-8 h-8" />,
-      titleKey: "feature3Title",
-      descKey: "feature3Desc",
+      title: "Sistema de Moralidad Complejo",
+      description: "Tus decisiones afectan no solo tu historia, sino el destino de todos los sobrevivientes y el futuro de la humanidad.",
       gradient: "from-radiation/20 to-purple-deep/10"
     },
     {
       icon: <Home className="w-8 h-8" />,
-      titleKey: "feature4Title",
-      descKey: "feature4Desc",
+      title: "Construcción de Refugio",
+      description: "Mejora y expande tu base agrícola con tecnología recuperada, defensas automáticas y sistemas de supervivencia.",
       gradient: "from-neon/20 to-wasteland/20"
     },
     {
       icon: <Sun className="w-8 h-8" />,
-      titleKey: "feature5Title",
-      descKey: "feature5Desc",
+      title: "Ciclo Dinámico de Mundo",
+      description: "Sistema de día/noche y estaciones que afectan el crecimiento, la radiación ambiental y el comportamiento de las criaturas.",
       gradient: "from-purple-deep/20 to-radiation/10"
     },
     {
       icon: <Gamepad2 className="w-8 h-8" />,
-      titleKey: "feature6Title",
-      descKey: "feature6Desc",
+      title: "Experiencia RPG Profunda",
+      description: "Desarrolla habilidades, desbloquea tecnologías y personaliza tu estilo de juego entre supervivencia y conquista.",
       gradient: "from-radiation/20 to-neon/10"
     }
   ];
@@ -56,8 +54,11 @@ export const FeaturesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('featuresTitle')}
+            Características <span className="text-neon">Clave</span>
           </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Una experiencia única que combina simulación, acción y narrativa en un mundo post-apocalíptico lleno de posibilidades.
+          </p>
         </div>
 
         {/* Features Grid */}
@@ -74,10 +75,10 @@ export const FeaturesSection = () => {
               
               {/* Content */}
               <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-neon transition-colors">
-                {t(feature.titleKey)}
+                {feature.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {t(feature.descKey)}
+                {feature.description}
               </p>
               
               {/* Decorative Element */}

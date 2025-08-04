@@ -9,15 +9,13 @@ import {
   GamepadIcon,
   Users
 } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export const CommunitySection = () => {
-  const { t } = useLanguage();
   const socialLinks = [
-    { icon: <GamepadIcon className="w-5 h-5" />, labelKey: "steamWishlist", href: "#" },
-    { icon: <MessageCircle className="w-5 h-5" />, labelKey: "discord", href: "#" },
-    { icon: <Twitter className="w-5 h-5" />, labelKey: "twitter", href: "#" },
-    { icon: <Youtube className="w-5 h-5" />, labelKey: "youtube", href: "#" }
+    { icon: <GamepadIcon className="w-5 h-5" />, label: "Steam", href: "#" },
+    { icon: <MessageCircle className="w-5 h-5" />, label: "Discord", href: "#" },
+    { icon: <Twitter className="w-5 h-5" />, label: "Twitter", href: "#" },
+    { icon: <Youtube className="w-5 h-5" />, label: "YouTube", href: "#" }
   ];
 
   return (
@@ -26,10 +24,10 @@ export const CommunitySection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('communityTitle')}
+            Únete a la <span className="text-neon">Comunidad</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            {t('communitySubtitle')}
+            Sé parte de los sobrevivientes. Recibe contenido exclusivo, participa en el desarrollo y conecta con otros jugadores.
           </p>
         </div>
 
@@ -50,12 +48,12 @@ export const CommunitySection = () => {
             <div className="space-y-4">
               <Input 
                 type="email" 
-                placeholder={t('emailPlaceholder')}
+                placeholder="tu.email@ejemplo.com"
                 className="bg-carbon border-border/50 focus:border-neon"
               />
               <Button variant="neon" className="w-full">
                 <Mail className="w-4 h-4 mr-2" />
-                {t('subscribeBtn')}
+                Suscribirse
               </Button>
             </div>
             
@@ -86,7 +84,7 @@ export const CommunitySection = () => {
                   className="h-12 justify-start hover:bg-neon/10 hover:border-neon transition-all duration-300"
                 >
                   {social.icon}
-                  <span className="ml-2">{t(social.labelKey)}</span>
+                  <span className="ml-2">{social.label}</span>
                 </Button>
               ))}
             </div>

@@ -1,8 +1,6 @@
 import { Atom, Mail, FileText, Shield, Twitter, Youtube, MessageCircle } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
-  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -16,12 +14,13 @@ export const Footer = () => {
                 <Atom className="w-6 h-6 text-carbon" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">{t('studioName')}</h3>
-                <p className="text-sm text-muted-foreground">{t('studioDesc')}</p>
+                <h3 className="text-xl font-bold text-foreground">Neon Circuit Games</h3>
+                <p className="text-sm text-muted-foreground">Desarrolladores de The Last Harvest</p>
               </div>
             </div>
             <p className="text-muted-foreground max-w-md mb-4">
-              {t('studioDesc')}
+              Creamos experiencias de juego inmersivas que desafían las convenciones, 
+              combinando narrativa profunda con mecánicas innovadoras.
             </p>
             
             {/* Social Media Links */}
@@ -40,35 +39,35 @@ export const Footer = () => {
 
           {/* Game Info */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">{t('aboutGame')}</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-4">El Juego</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#about" className="hover:text-neon transition-colors">{t('aboutGame')}</a></li>
-              <li><a href="#features" className="hover:text-neon transition-colors">{t('featuresTitle')}</a></li>
-              <li><a href="#press" className="hover:text-neon transition-colors">{t('pressKit')}</a></li>
-              <li><a href="#contact" className="hover:text-neon transition-colors">{t('contact')}</a></li>
+              <li><a href="#about" className="hover:text-neon transition-colors">Sobre el Juego</a></li>
+              <li><a href="#features" className="hover:text-neon transition-colors">Características</a></li>
+              <li><a href="#gallery" className="hover:text-neon transition-colors">Galería</a></li>
+              <li><a href="#trailer" className="hover:text-neon transition-colors">Tráiler</a></li>
             </ul>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">{t('legal')}</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-4">Enlaces</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
                 <a href="#press" className="hover:text-neon transition-colors flex items-center">
                   <FileText className="w-4 h-4 mr-2" />
-                  {t('pressKit')}
+                  Kit de Prensa
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-neon transition-colors flex items-center">
                   <Mail className="w-4 h-4 mr-2" />
-                  {t('contact')}
+                  Contacto
                 </a>
               </li>
               <li>
                 <a href="#privacy" className="hover:text-neon transition-colors flex items-center">
                   <Shield className="w-4 h-4 mr-2" />
-                  {t('privacy')}
+                  Privacidad
                 </a>
               </li>
             </ul>
@@ -78,12 +77,12 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {currentYear} {t('studioName')}. {t('allRights')}
+            © {currentYear} Neon Circuit Games. Todos los derechos reservados.
           </div>
           
           {/* Platform Links */}
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-            <span>{t('platforms')}:</span>
+            <span>Disponible en:</span>
             <a href="#" className="hover:text-neon transition-colors">Steam</a>
             <span>•</span>
             <a href="#" className="hover:text-neon transition-colors">Epic Games</a>
