@@ -6,32 +6,31 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export const GameOverview = () => {
   const { t } = useLanguage();
-  
   const features = [
     {
       icon: <Sprout className="w-6 h-6" />,
-      title: t('postNuclearCrops'),
-      description: t('postNuclearCropsDesc')
+      title: "Cultivos Post-Nucleares",
+      description: "Cultiva plantas mutadas con propiedades extraordinarias"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: t('wastelandExploration'),
-      description: t('wastelandExplorationDesc')
+      title: "Exploración del Yermo",
+      description: "Aventúrate en tierras radiactivas llenas de peligros y secretos"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: t('survivorRelations'),
-      description: t('survivorRelationsDesc')
+      title: "Relaciones con Sobrevivientes",
+      description: "Construye alianzas o enemistades que afectarán tu historia"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: t('moralDecisions'),
-      description: t('moralDecisionsDesc')
+      title: "Decisiones Morales",
+      description: "Cada elección tiene consecuencias en el destino del mundo"
     },
     {
       icon: <Skull className="w-6 h-6" />,
-      title: t('multipleEndings'),
-      description: t('multipleEndingsDesc')
+      title: "Finales Múltiples",
+      description: "Tu camino determinará si la humanidad sobrevive o perece"
     }
   ];
 
@@ -41,10 +40,10 @@ export const GameOverview = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            {t('aboutGame')} <span className="text-neon">{t('game')}</span>
+            {t('gameOverviewTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            {t('gameDescription')}
+            {t('gameOverviewDesc')}
           </p>
         </div>
 
@@ -57,9 +56,9 @@ export const GameOverview = () => {
               className="w-full h-64 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold text-neon mb-2">{t('postApocAgriculture')}</h3>
+              <h3 className="text-xl font-bold text-neon mb-2">Agricultura Post-Apocalíptica</h3>
               <p className="text-muted-foreground">
-                {t('postApocDescription')}
+                Cultiva vegetales mutados que brillan con energía radiactiva y poseen propiedades únicas.
               </p>
             </div>
           </Card>
@@ -71,9 +70,9 @@ export const GameOverview = () => {
               className="w-full h-64 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold text-purple-deep mb-2">{t('radioactiveWasteland')}</h3>
+              <h3 className="text-xl font-bold text-purple-deep mb-2">Yermo Radiactivo</h3>
               <p className="text-muted-foreground">
-                {t('wastelandDescription')}
+                Explora un mundo devastado lleno de criaturas mutadas, ruinas y tecnología perdida.
               </p>
             </div>
           </Card>

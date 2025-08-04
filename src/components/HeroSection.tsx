@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export const HeroSection = () => {
   const { t } = useLanguage();
-  
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -15,13 +15,6 @@ export const HeroSection = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-carbon/80 via-carbon/60 to-carbon/90" />
-      </div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-neon rounded-full animate-pulse" />
-        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-radiation rounded-full animate-pulse delay-700" />
-        <div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-purple-deep rounded-full animate-pulse delay-1000" />
       </div>
 
       {/* Content */}

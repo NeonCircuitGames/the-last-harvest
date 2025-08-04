@@ -16,13 +16,12 @@ export const Footer = () => {
                 <Atom className="w-6 h-6 text-carbon" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">Neon Circuit Games</h3>
-                <p className="text-sm text-muted-foreground">{t('gameStudio')}</p>
+                <h3 className="text-xl font-bold text-foreground">{t('studioName')}</h3>
+                <p className="text-sm text-muted-foreground">{t('studioDesc')}</p>
               </div>
             </div>
             <p className="text-muted-foreground max-w-md mb-4">
-              Creamos experiencias de juego inmersivas que desafían las convenciones, 
-              combinando narrativa profunda con mecánicas innovadoras.
+              {t('studioDesc')}
             </p>
             
             {/* Social Media Links */}
@@ -41,35 +40,35 @@ export const Footer = () => {
 
           {/* Game Info */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">El Juego</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-4">{t('aboutGame')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#about" className="hover:text-neon transition-colors">Sobre el Juego</a></li>
-              <li><a href="#features" className="hover:text-neon transition-colors">Características</a></li>
-              <li><a href="#gallery" className="hover:text-neon transition-colors">Galería</a></li>
-              <li><a href="#trailer" className="hover:text-neon transition-colors">Tráiler</a></li>
+              <li><a href="#about" className="hover:text-neon transition-colors">{t('aboutGame')}</a></li>
+              <li><a href="#features" className="hover:text-neon transition-colors">{t('featuresTitle')}</a></li>
+              <li><a href="#press" className="hover:text-neon transition-colors">{t('pressKit')}</a></li>
+              <li><a href="#contact" className="hover:text-neon transition-colors">{t('contact')}</a></li>
             </ul>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">Enlaces</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-4">{t('legal')}</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
                 <a href="#press" className="hover:text-neon transition-colors flex items-center">
                   <FileText className="w-4 h-4 mr-2" />
-                  Kit de Prensa
+                  {t('pressKit')}
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-neon transition-colors flex items-center">
                   <Mail className="w-4 h-4 mr-2" />
-                  Contacto
+                  {t('contact')}
                 </a>
               </li>
               <li>
                 <a href="#privacy" className="hover:text-neon transition-colors flex items-center">
                   <Shield className="w-4 h-4 mr-2" />
-                  Privacidad
+                  {t('privacy')}
                 </a>
               </li>
             </ul>
@@ -79,12 +78,12 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-muted-foreground text-sm mb-4 md:mb-0">
-            {t('copyright')}
+            © {currentYear} {t('studioName')}. {t('allRights')}
           </div>
           
           {/* Platform Links */}
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-            <span>Disponible en:</span>
+            <span>{t('platforms')}:</span>
             <a href="#" className="hover:text-neon transition-colors">Steam</a>
             <span>•</span>
             <a href="#" className="hover:text-neon transition-colors">Epic Games</a>

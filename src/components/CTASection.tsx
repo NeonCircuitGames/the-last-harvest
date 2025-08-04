@@ -4,7 +4,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export const CTASection = () => {
   const { t } = useLanguage();
-  
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-carbon to-black">
       <div className="max-w-4xl mx-auto text-center">
@@ -14,7 +13,7 @@ export const CTASection = () => {
             {t('ctaTitle')}
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {t('ctaDescription')}
+            {t('ctaSubtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto mb-8">
@@ -25,7 +24,7 @@ export const CTASection = () => {
             />
             <Button variant="neon" size="lg" className="w-full sm:w-auto">
               <Mail className="w-5 h-5 mr-2" />
-              {t('subscribe')}
+              {t('subscribeButton')}
             </Button>
           </div>
         </div>
@@ -33,11 +32,8 @@ export const CTASection = () => {
         {/* Secondary CTA */}
         <div className="border-t border-border/30 pt-12">
           <h3 className="text-2xl font-bold mb-4 text-foreground">
-            {t('addToWishlist')}
+            {t('ctaWishlist')}
           </h3>
-          <p className="text-muted-foreground mb-6">
-            {t('wishlistDescription')}
-          </p>
           
           <Button variant="hero" size="xl" className="group">
             <Heart className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
