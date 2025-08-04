@@ -1,6 +1,8 @@
 import { Atom, Mail, FileText, Shield, Twitter, Youtube, MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,7 +17,7 @@ export const Footer = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground">Neon Circuit Games</h3>
-                <p className="text-sm text-muted-foreground">Desarrolladores de The Last Harvest</p>
+                <p className="text-sm text-muted-foreground">{t('gameStudio')}</p>
               </div>
             </div>
             <p className="text-muted-foreground max-w-md mb-4">
@@ -77,7 +79,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {currentYear} Neon Circuit Games. Todos los derechos reservados.
+            {t('copyright')}
           </div>
           
           {/* Platform Links */}

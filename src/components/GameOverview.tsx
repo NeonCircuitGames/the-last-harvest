@@ -2,33 +2,36 @@ import { Card } from "@/components/ui/card";
 import { Sprout, Zap, Users, Target, Skull } from "lucide-react";
 import mutatedCropsImage from "@/assets/mutated-crops.jpg";
 import wastelandImage from "@/assets/wasteland-exploration.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const GameOverview = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: <Sprout className="w-6 h-6" />,
-      title: "Cultivos Post-Nucleares",
-      description: "Cultiva plantas mutadas con propiedades extraordinarias"
+      title: t('postNuclearCrops'),
+      description: t('postNuclearCropsDesc')
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Exploración del Yermo",
-      description: "Aventúrate en tierras radiactivas llenas de peligros y secretos"
+      title: t('wastelandExploration'),
+      description: t('wastelandExplorationDesc')
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Relaciones con Sobrevivientes",
-      description: "Construye alianzas o enemistades que afectarán tu historia"
+      title: t('survivorRelations'),
+      description: t('survivorRelationsDesc')
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Decisiones Morales",
-      description: "Cada elección tiene consecuencias en el destino del mundo"
+      title: t('moralDecisions'),
+      description: t('moralDecisionsDesc')
     },
     {
       icon: <Skull className="w-6 h-6" />,
-      title: "Finales Múltiples",
-      description: "Tu camino determinará si la humanidad sobrevive o perece"
+      title: t('multipleEndings'),
+      description: t('multipleEndingsDesc')
     }
   ];
 
@@ -38,12 +41,10 @@ export const GameOverview = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Sobre el <span className="text-neon">Juego</span>
+            {t('aboutGame')} <span className="text-neon">{t('game')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            En un mundo devastado por la guerra nuclear, eres el último granjero de la humanidad. 
-            Tu refugio agrícola es la única esperanza de supervivencia, pero el yermo radiactivo 
-            esconde secretos que podrían salvar o condenar a todos para siempre.
+            {t('gameDescription')}
           </p>
         </div>
 
@@ -56,9 +57,9 @@ export const GameOverview = () => {
               className="w-full h-64 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold text-neon mb-2">Agricultura Post-Apocalíptica</h3>
+              <h3 className="text-xl font-bold text-neon mb-2">{t('postApocAgriculture')}</h3>
               <p className="text-muted-foreground">
-                Cultiva vegetales mutados que brillan con energía radiactiva y poseen propiedades únicas.
+                {t('postApocDescription')}
               </p>
             </div>
           </Card>
@@ -70,9 +71,9 @@ export const GameOverview = () => {
               className="w-full h-64 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold text-purple-deep mb-2">Yermo Radiactivo</h3>
+              <h3 className="text-xl font-bold text-purple-deep mb-2">{t('radioactiveWasteland')}</h3>
               <p className="text-muted-foreground">
-                Explora un mundo devastado lleno de criaturas mutadas, ruinas y tecnología perdida.
+                {t('wastelandDescription')}
               </p>
             </div>
           </Card>

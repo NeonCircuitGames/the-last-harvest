@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Play, Heart, ExternalLink } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const HeroSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -30,35 +33,34 @@ export const HeroSection = () => {
         
         {/* Game Title */}
         <h1 className="text-6xl md:text-8xl font-orbitron font-black mb-6 bg-gradient-neon bg-clip-text text-transparent tracking-wider drop-shadow-2xl">
-          THE LAST HARVEST
+          {t('heroTitle')}
         </h1>
         
         {/* Slogan */}
         <p className="text-2xl md:text-3xl text-foreground/90 mb-8 font-light">
-          Salva el futuro… o destrúyelo para siempre
+          {t('heroSlogan')}
         </p>
         
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-          Cultiva en un mundo post-nuclear. Explora el yermo radiactivo. 
-          Toma decisiones que determinarán el destino de la humanidad.
+          {t('heroSubtitle')}
         </p>
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button variant="hero" size="xl" className="group">
             <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-            Ver Tráiler
+            {t('watchTrailer')}
           </Button>
           
           <Button variant="neon" size="xl" className="group">
             <Heart className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-            Wishlist en Steam
+            {t('steamWishlist')}
           </Button>
           
           <Button variant="wasteland" size="xl" className="group">
             <ExternalLink className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-            Explorar el Juego
+            {t('exploreGame')}
           </Button>
         </div>
         

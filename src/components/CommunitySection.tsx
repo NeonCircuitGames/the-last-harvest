@@ -9,8 +9,11 @@ import {
   GamepadIcon,
   Users
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const CommunitySection = () => {
+  const { t } = useLanguage();
+  
   const socialLinks = [
     { icon: <GamepadIcon className="w-5 h-5" />, label: "Steam", href: "#" },
     { icon: <MessageCircle className="w-5 h-5" />, label: "Discord", href: "#" },
@@ -24,10 +27,10 @@ export const CommunitySection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Únete a la <span className="text-neon">Comunidad</span>
+            {t('joinCommunity')} <span className="text-neon">{t('community')}</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Sé parte de los sobrevivientes. Recibe contenido exclusivo, participa en el desarrollo y conecta con otros jugadores.
+            {t('communityDescription')}
           </p>
         </div>
 
@@ -38,22 +41,22 @@ export const CommunitySection = () => {
               <div className="w-12 h-12 bg-neon/10 rounded-lg flex items-center justify-center text-neon mr-4">
                 <Mail className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground">Newsletter Exclusivo</h3>
+              <h3 className="text-2xl font-bold text-foreground">{t('newsletter')}</h3>
             </div>
             
             <p className="text-muted-foreground mb-6">
-              Recibe avances exclusivos, arte conceptual y acceso anticipado a betas y demos.
+              {t('newsletterDesc')}
             </p>
             
             <div className="space-y-4">
               <Input 
                 type="email" 
-                placeholder="tu.email@ejemplo.com"
+                placeholder={t('emailPlaceholder')}
                 className="bg-carbon border-border/50 focus:border-neon"
               />
               <Button variant="neon" className="w-full">
                 <Mail className="w-4 h-4 mr-2" />
-                Suscribirse
+                {t('subscribe')}
               </Button>
             </div>
             
