@@ -2,8 +2,10 @@ import { Card } from "@/components/ui/card";
 import { Sprout, Zap, Users, Target, Skull } from "lucide-react";
 import mutatedCropsImage from "@/assets/mutated-crops.jpg";
 import wastelandImage from "@/assets/wasteland-exploration.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const GameOverview = () => {
+  const { t } = useLanguage();
   const features = [
     {
       icon: <Sprout className="w-6 h-6" />,
@@ -38,12 +40,10 @@ export const GameOverview = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Sobre el <span className="text-neon">Juego</span>
+            {t('gameOverviewTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            En un mundo devastado por la guerra nuclear, eres el último granjero de la humanidad. 
-            Tu refugio agrícola es la única esperanza de supervivencia, pero el yermo radiactivo 
-            esconde secretos que podrían salvar o condenar a todos para siempre.
+            {t('gameOverviewDesc')}
           </p>
         </div>
 
