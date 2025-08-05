@@ -18,10 +18,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        neon: "bg-neon text-carbon font-bold hover:bg-radiation hover:shadow-neon hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-neon/50 relative overflow-hidden group animate-pulse",
+        neon: "bg-neon text-carbon font-bold hover:bg-radiation hover:shadow-neon hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-neon/50 relative overflow-hidden group animate-[pulse_3s_ease-in-out_infinite]",
         hero: "bg-gradient-neon text-carbon font-bold hover:shadow-neon hover:shadow-purple hover:scale-105 transition-all duration-300 border border-neon/30 relative overflow-hidden group before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-700",
         wasteland: "bg-purple-deep text-foreground hover:bg-purple-deep/80 hover:shadow-purple hover:shadow-xl hover:scale-105 transition-all duration-300 relative overflow-hidden group",
-        steam: "bg-gradient-to-r from-neon to-radiation text-carbon font-bold hover:from-radiation hover:to-neon hover:shadow-neon hover:shadow-2xl hover:scale-110 transition-all duration-300 border border-neon/50 relative overflow-hidden group animate-pulse before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-500",
+        steam: "bg-gradient-to-r from-neon to-radiation text-carbon font-bold hover:from-radiation hover:to-neon hover:shadow-neon hover:shadow-2xl hover:scale-110 transition-all duration-300 border border-neon/50 relative overflow-hidden group animate-[pulse_2.5s_ease-in-out_infinite] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-500",
       },
       size: {
         default: "h-10 px-4 py-2",

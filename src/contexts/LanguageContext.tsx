@@ -41,7 +41,7 @@ const translations = {
     // CTA Section
     ctaTitle: "¿LISTO PARA LA COSECHA FINAL?",
     ctaSubtitle: "Únete a miles de supervivientes y recibe contenido exclusivo",
-    subscribeButton: "Suscribirse para Avances",
+    subscribeButton: "Suscribirse",
     ctaWishlist: "Añadir a Wishlist",
     
     // Community Section
@@ -112,7 +112,7 @@ const translations = {
     // CTA Section
     ctaTitle: "READY FOR THE FINAL HARVEST?",
     ctaSubtitle: "Join thousands of survivors and receive exclusive content",
-    subscribeButton: "Subscribe for Updates",
+    subscribeButton: "Subscribe",
     ctaWishlist: "Add to Wishlist",
     
     // Community Section

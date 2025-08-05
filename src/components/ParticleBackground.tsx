@@ -33,7 +33,7 @@ export const ParticleBackground = () => {
 
     // Initialize particles
     const initParticles = () => {
-      const particleCount = Math.floor((canvas.width * canvas.height) / 15000); // Responsive particle count
+      const particleCount = Math.floor((canvas.width * canvas.height) / 8000); // Increased particle density
       particlesRef.current = [];
 
       for (let i = 0; i < particleCount; i++) {
