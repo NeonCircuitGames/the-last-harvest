@@ -3,9 +3,16 @@ import { Sprout, Zap, Users, Target, Skull } from "lucide-react";
 import mutatedCropsImage from "@/assets/mutated-crops.jpg";
 import wastelandImage from "@/assets/wasteland-exploration.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const GameOverview = () => {
   const { t } = useLanguage();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  
   const features = [
     {
       icon: <Sprout className="w-6 h-6" />,
@@ -35,17 +42,22 @@ export const GameOverview = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-hero">
+    <section ref={ref} className="py-20 px-4 bg-gradient-hero">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             {t('gameOverviewTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             {t('gameOverviewDesc')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Game Images Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">

@@ -53,6 +53,17 @@ const translations = {
     twitter: "Twitter",
     youtube: "YouTube",
     
+    // Project Status
+    projectStatusBadge: "En Desarrollo",
+    projectStatusTitle: "ESTADO DEL PROYECTO",
+    projectStatusPhase: "Pre-Alpha",
+    projectStatusDescription: "The Last Harvest está en desarrollo activo. Actualmente en fase pre-alpha. Tu feedback puede moldear el destino del juego.",
+    projectStatusProgress: "Completado",
+    projectStatusRelease: "Lanzamiento",
+    projectStatusCommunityTitle: "Únete a la Revolución",
+    projectStatusCommunityDesc: "Conviértete en parte de la comunidad de supervivientes y ayuda a dar forma al futuro del juego.",
+    projectStatusJoinTester: "Únete como Tester",
+    
     // Footer
     studioName: "Neon Circuit Games",
     studioDesc: "Creadores de experiencias post-apocalípticas inmersivas",
@@ -112,6 +123,17 @@ const translations = {
     discord: "Discord",
     twitter: "Twitter",
     youtube: "YouTube",
+    
+    // Project Status
+    projectStatusBadge: "In Development",
+    projectStatusTitle: "PROJECT STATUS",
+    projectStatusPhase: "Pre-Alpha",
+    projectStatusDescription: "The Last Harvest is in active development. Currently in pre-alpha phase. Your feedback can shape the game's destiny.",
+    projectStatusProgress: "Complete",
+    projectStatusRelease: "Release",
+    projectStatusCommunityTitle: "Join the Revolution",
+    projectStatusCommunityDesc: "Become part of the survivor community and help shape the future of the game.",
+    projectStatusJoinTester: "Join as Tester",
     
     // Footer
     studioName: "Neon Circuit Games",

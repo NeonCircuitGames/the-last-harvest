@@ -8,9 +8,16 @@ import {
   Gamepad2 
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const FeaturesSection = () => {
   const { t } = useLanguage();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  
   const features = [
     {
       icon: <Atom className="w-8 h-8" />,
